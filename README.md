@@ -3,7 +3,7 @@ Database project
 
 # TI404 — Databases 1 (Basic Concepts)
 ## Mini-Project — MERISE Database Design (Part 1)
-### Domain: **Hasbro — Beyblade Toys Division (Toys Only)**
+### Domain: **Hasbro — Beyblade Toys Division**
 
 ---
 
