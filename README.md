@@ -103,42 +103,44 @@ Operations teams need visibility on what stock is available, where, and what is 
 
 ## 4. Raw Data Dictionary (35 items)
 
-Meaning of the data	Type	Size (chars / digits)
-Product generation code (internal identifier)	Text	10
-Product generation name (marketing name)	Text	60
-Generation start date	Date	10
-Generation end date (if applicable)	Date	10
-Product line name (e.g., Starter, Booster, Stadium Set)	Text	40
-Product category (Top / Launcher / Stadium / Accessory)	Text	20
-Internal product code (company SKU)	Text	20
-Product commercial name	Text	80
-Packaging configuration (e.g., Top+Launcher, Stadium Set)	Text	30
-Barcode / EAN / UPC	Text	14
-Recommended age grade (e.g., 8+)	Text	5
-Model “type” for marketing (Attack/Defense/etc.)	Text	15
-Part code (internal identifier for a part)	Text	20
-Part name	Text	60
-Part category (Layer/Driver/Disc/etc. depending on system)	Text	25
-Part material (plastic/metal/rubber/etc.)	Text	20
-Part weight (grams)	Decimal	5 (e.g., 999.9)
-Country / market code (ISO-like)	Text	3
-Country / market name	Text	60
-Market currency code (ISO 4217)	Text	3
-Market release date for product	Date	10
-Release status (planned/confirmed/delayed/cancelled)	Text	12
-Distributor name	Text	80
-Distributor legal identifier (company registration / VAT ID)	Text	20
-Distribution contract reference	Text	25
-Contract start date	Date	10
-Contract end date	Date	10
-Incoterms / shipping terms (e.g., FOB, DDP)	Text	10
-Retail partner name	Text	80
-Retail partner channel (mass retail / specialty / e-commerce)	Text	20
-MSRP/RRP amount (by market)	Decimal	9 (e.g., 99999.99)
-Wholesale unit price (contract price)	Decimal	9 (e.g., 99999.99)
-Warehouse code	Text	10
-Warehouse country code	Text	3
-On-hand stock quantity (units)	Integer	9
+| Meaning of the data                                           | Type    | Size (chars / digits) |
+| ------------------------------------------------------------- | ------- | --------------------- |
+| Product generation code (internal identifier)                 | Text    | 10                    |
+| Product generation name (marketing name)                      | Text    | 60                    |
+| Generation start date                                         | Date    | 10                    |
+| Generation end date (if applicable)                           | Date    | 10                    |
+| Product line name (e.g., Starter, Booster, Stadium Set)       | Text    | 40                    |
+| Product category (Top / Launcher / Stadium / Accessory)       | Text    | 20                    |
+| Internal product code (company SKU)                           | Text    | 20                    |
+| Product commercial name                                       | Text    | 80                    |
+| Packaging configuration (e.g., Top+Launcher, Stadium Set)     | Text    | 30                    |
+| Barcode / EAN / UPC                                           | Text    | 14                    |
+| Recommended age grade (e.g., 8+)                              | Text    | 5                     |
+| Model “type” for marketing (Attack/Defense/etc.)              | Text    | 15                    |
+| Part code (internal identifier for a part)                    | Text    | 20                    |
+| Part name                                                     | Text    | 60                    |
+| Part category (Layer/Driver/Disc/etc. depending on system)    | Text    | 25                    |
+| Part material (plastic/metal/rubber/etc.)                     | Text    | 20                    |
+| Part weight (grams)                                           | Decimal | 5 (e.g., 999.9)       |
+| Country / market code (ISO-like)                              | Text    | 3                     |
+| Country / market name                                         | Text    | 60                    |
+| Market currency code (ISO 4217)                               | Text    | 3                     |
+| Market release date for product                               | Date    | 10                    |
+| Release status (planned/confirmed/delayed/cancelled)          | Text    | 12                    |
+| Distributor name                                              | Text    | 80                    |
+| Distributor legal identifier (company registration / VAT ID)  | Text    | 20                    |
+| Distribution contract reference                               | Text    | 25                    |
+| Contract start date                                           | Date    | 10                    |
+| Contract end date                                             | Date    | 10                    |
+| Incoterms / shipping terms (e.g., FOB, DDP)                   | Text    | 10                    |
+| Retail partner name                                           | Text    | 80                    |
+| Retail partner channel (mass retail / specialty / e-commerce) | Text    | 20                    |
+| MSRP/RRP amount (by market)                                   | Decimal | 9 (e.g., 99999.99)    |
+| Wholesale unit price (contract price)                         | Decimal | 9 (e.g., 99999.99)    |
+| Warehouse code                                                | Text    | 10                    |
+| Warehouse country code                                        | Text    | 3                     |
+| On-hand stock quantity (units)                                | Integer | 9                     |
+
 ---
 
 ## 5. MCD (Conceptual Data Model)
