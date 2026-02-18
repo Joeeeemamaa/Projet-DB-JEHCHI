@@ -23,29 +23,7 @@ This README contains the deliverables for **Part 1**:
 
 ---
 
-## 2. Final Prompt Used
-
-```txt
-You work in the field of toy manufacturing and international product distribution. Your company is involved in the domain of design, production, marketing, and worldwide distribution of spinning battle toys under the Beyblade brand. It is a multinational toy manufacturing company such as Hasbro, Mattel, or Bandai. The company designs Beyblade products (tops, launchers, stadiums, accessories), organizes their production, and distributes them globally through various distributors and retailers.
-
-The company collects information related to product generations, individual Beyblade models, interchangeable parts, product categories, distributors, countries of operation, retail partners, distribution contracts, product pricing, stock quantities, warehouse locations, and international release schedules.
-
-Take inspiration from the following websites and references:
-- https://www.hasbro.com
-- https://beyblade.hasbro.com
-- https://en.wikipedia.org/wiki/Beyblade
-- https://corporate.hasbro.com
-
-Your company wants to apply MERISE to design an information system. You are responsible for the analysis part, i.e., gathering the company's requirements. It has called on a computer engineering student to carry out this project, and you must provide him with the necessary information so that he can then apply the following steps of database design and development himself.
-
-First, establish the data business rules for your company in the form of a bulleted list. It must correspond to the information provided by someone who knows how the company works, but not how an information system is built.
-Next, based on these rules, provide a raw data dictionary with the following columns, grouped in a table: meaning of the data, type, size in number of characters or digits. There should be between 25 and 35 data items. It is used to provide additional information about each data item (size and type) but without any assumptions about how the data will be modeled later.
-
-Provide the business rules and the data dictionary.
-```
----
-
-## 3. Data Business Rules (as spoken by the business)
+## 2. Data Business Rules (as spoken by the business)
 
 The Beyblade brand is managed by product generations (e.g., a generation has a name, a start date, and an end date when applicable).
 
@@ -101,7 +79,7 @@ Operations teams need visibility on what stock is available, where, and what is 
 
 ---
 
-## 4. Raw Data Dictionary (35 items)
+## 3. Raw Data Dictionary (35 items)
 
 | Meaning of the data                                           | Type    | Size (chars / digits) |
 | ------------------------------------------------------------- | ------- | --------------------- |
@@ -143,7 +121,7 @@ Operations teams need visibility on what stock is available, where, and what is 
 
 ---
 
-## 5. MCD (Conceptual Data Model)
+## 4. MCD (Conceptual Data Model)
 
 # Modeling constraints
 
@@ -181,7 +159,7 @@ retail_partner_market
 
 ---
 
-## 6. Advanced Modeling Elements Used
+## 5. Advanced Modeling Elements Used
 
 ✅ Weak Entity
 
@@ -202,7 +180,7 @@ This models the fact that product availability in a market depends on contract c
 
 ---
 
-## 7. Notes / Justification
+## 6. Notes / Justification
 
 Separating product and packaging supports multiple sellable pack configurations (unique barcodes).
 
@@ -216,7 +194,7 @@ Stock is managed per warehouse and per product, with traceable movements.
 
 ---
 
-## 8. MCD Diagram
+## 7. MCD Diagram
 
 Insert your MCD image here (exported from your modeling tool):
 
@@ -224,7 +202,7 @@ Insert your MCD image here (exported from your modeling tool):
 
 ---
 
-##  9. Part 1 Deliverables Checklist
+##  8. Part 1 Deliverables Checklist
 
  Final prompt included
 
