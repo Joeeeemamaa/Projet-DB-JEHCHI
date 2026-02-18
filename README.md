@@ -220,7 +220,7 @@ Stock is managed per warehouse and per product, with traceable movements.
 
 Insert your MCD image here (exported from your modeling tool):
 
-![MCD](./Hasbro_-_Beyblade_database.png)
+![MCD](./Hasbro - Beyblade database.png)
 
 ---
 
