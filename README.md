@@ -135,7 +135,7 @@ Includes advanced modeling elements (minimum 2)
 
 # Main entities (overview)
 
-generation, product_line, product
+generation, product
 
 packaging (weak entity)
 
@@ -143,17 +143,17 @@ part, part_category
 
 market
 
-distributor, distribution_contract
+distribution_contract
 
 retail_partner
 
-warehouse, stock, stock_movement
+warehouse, stock_movement
 
 market_product_release
 
 price_msrp, price_wholesale
 
-contract_coverage (ternary association)
+contract_coverage 
 
 retail_partner_market
 
@@ -165,18 +165,6 @@ retail_partner_market
 
 packaging is a weak entity dependent on product
 → A packaging configuration exists only for a specific product and is identified by (internal_product_code + barcode).
-
-✅ N-ary Relationship (n > 2)
-
-contract_coverage is modeled as a ternary association linking:
-
-distribution_contract
-
-distributor
-
-market
-
-This models the fact that product availability in a market depends on contract coverage, distributor, and time period.
 
 ---
 
