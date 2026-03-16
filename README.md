@@ -202,4 +202,65 @@ Insert your MCD image here (exported from your modeling tool):
 
  MCD image added to repository and linked in README
 
- Both group members committed to GitHub
+### Conceptual Model Explanation
+
+The conceptual data model represents the lifecycle of Beyblade toy products from design to distribution.
+
+At the center of the model is the **product** entity, which represents a sellable toy reference identified by a unique internal product code and a commercial name.
+
+Products belong to a **generation**, which represents a technological era of Beyblade systems (for example Burst or X).  
+The relationship `produce` indicates that a generation can produce many products, while each product belongs to exactly one generation.
+
+A product can be sold in multiple **packaging configurations**, such as single tops, starter sets, or stadium bundles.  
+Because packaging only exists for a specific product and is identified by a barcode within that product, it is modeled as a **weak entity** dependent on `product`.
+
+Products are composed of interchangeable **parts**.  
+Since a product can contain several parts and a part can appear in multiple products, this relationship is modeled through the associative entity **product_part**.
+
+Parts themselves belong to a **part_category**, allowing classification of gameplay components such as layer, disc, or driver.
+
+Products are distributed internationally through **markets** representing countries or regions.  
+The relationship **market_product_release** records the release date and release status of a product within each market.
+
+Pricing information is separated into two levels:
+
+- **price_msrp**, which stores the recommended retail price for a product within a market
+- **price_wholesale**, which stores the wholesale price associated with a distribution contract
+
+Distribution is managed through **distribution_contract**, which defines agreements with distributors for specific markets and time periods.  
+The relationship **contract_coverage** indicates which markets are covered by a given contract.
+
+Retail partners such as toy chains or e-commerce platforms are represented by the **retail_partner** entity.  
+The relationship **retail_partner_market** indicates the markets in which each partner operates.
+
+Logistics operations are represented by **warehouse**, which stores information about storage locations.  
+The **stocked** relationship records stock movements of products in warehouses, including the movement type and movement date.
+
+Together, these entities model the product structure, market releases, pricing strategies, distribution contracts, and logistics flows of the Beyblade product ecosystem.
+
+---
+
+## 9. Logical Data Model (SQL Implementation)
+
+The conceptual model was translated into a logical schema using SQL `CREATE TABLE` statements.
+
+Each entity in the conceptual model corresponds to a relational table.  
+Associative relationships were implemented using junction tables containing foreign keys referencing the related entities.
+
+Primary keys ensure entity identification, while foreign keys enforce referential integrity between tables.
+
+Examples:
+
+- `product` references `generation`
+- `packaging` references `product`
+- `product_part` references both `product` and `part`
+- `market_product_release` references both `product` and `market`
+- `price_wholesale` references `distribution_contract`
+
+All tables were designed to respect **Third Normal Form (3NF)**, ensuring that:
+
+- each attribute depends on the whole primary key
+- no partial dependencies exist
+- no transitive dependencies exist
+
+The SQL scripts for table creation, data insertion, and queries are available in this repository.
